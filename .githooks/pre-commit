@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "Running pre-commit checks..."
+
+git diff --cached --check
+
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "ERROR: Pre-commit checks failed!"
+    echo "Please fix whitespace errors before committing."
+    exit 1
+fi
+
+echo "All pre-commit checks passed!"
+exit 0

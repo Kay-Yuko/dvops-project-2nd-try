@@ -63,3 +63,23 @@ Reasons why we follow these rules:
 - Request teammate reviews before merging.
 - Communicate before editing shared files.
 - Resolve conflicts and retest before completing merges.
+
+7. Pull Request (PR) Review Process
+
+Before merging changes into `main`, team members must create a Pull Request (PR) for review.
+
+Steps for PR Review:
+1. Push the completed feature branch to GitHub.
+2. Create a Pull Request targeting the `main` branch.
+3. Assign at least one teammate as a reviewer.
+4. The reviewer checks the code for errors, bugs and unnecessary changes.
+5. The reviewer provides feedback or approves the changes.
+6. Address any requested changes and push the updates.
+7. Once approved, merge the Pull Request into `main`.
+8. Delete the branch after merging if it is no longer needed.
+
+PR Review Rules:
+- Members must not approve their own Pull Requests.
+- Every PR should receive at least one teammate review.
+- Reviewers should provide constructive feedback.
+- Do not merge PRs with unresolved issues.

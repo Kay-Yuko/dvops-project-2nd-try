@@ -7,6 +7,12 @@ function viewResources() {
     request.onload = function () {
         response = JSON.parse(request.responseText);
 
+
+        if (response.length === 0) {
+            document.getElementById('animalList').innerHTML =
+                '<p class="no-results">No pets found. Try refreshing your page.</p>';
+            return;
+        }
         var html = '';
 
         for (var i = 0; i < response.length; i++) {

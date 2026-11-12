@@ -333,3 +333,15 @@ ul a:hover {
         right: 20px;
     }
 }
+
+
+/* Error Handling */
+.no-results {
+    grid-column: 1 / -1;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 0;
+    margin: 0;
+}

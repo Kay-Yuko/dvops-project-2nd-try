@@ -16,11 +16,11 @@ function viewResources() {
         var html = '';
 
         for (var i = 0; i < response.length; i++) {
-            html += '<a href="details.html">'  + 
+            html += '<a href="Details.html?id=' + response[i].id + '">' +
             '<div class="animal">' +
                 '<div class="petImage">' +
                 '<div class="petStatus">' + response[i].status + '</div>' +
-                '</div>' +
+            '</div>' +
 
                 '<div class="animalInfo">' +
                 '<p>' +

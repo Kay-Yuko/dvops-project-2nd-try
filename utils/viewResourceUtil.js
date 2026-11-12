@@ -1,6 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
+
 const RESOURCES_FILE = path.join('utils', 'resources.json');
+
 async function viewResources(req, res) {
     try {
         const data = await fs.readFile(RESOURCES_FILE, 'utf8');
@@ -14,4 +16,30 @@ async function viewResources(req, res) {
         return res.status(500).json({ message: error.message });
     }
 }
-module.exports = { viewResources };
+
+async function viewResourceById(req, res) {
+    try {
+        const id = req.params.id;
+
+        const data = await fs.readFile(RESOURCES_FILE, 'utf8');
+        const allResources = JSON.parse(data);
+
+        const resource = allResources.find(function (animal) {
+            return String(animal.id) === String(id);
+        });
+
+        if (!resource) {
+            return res.status(404).json({ message: 'Animal not found' });
+        }
+
+        return res.status(200).json(resource);
+
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return res.status(404).json({ message: 'Animal not found' });
+        }
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+module.exports = { viewResources, viewResourceById };

@@ -161,11 +161,9 @@ body {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px;
-
   width: 90%;
   max-width: 1520px;
-
-  margin: 0 auto 30px auto;
+  margin: 0 auto 50px auto;
 }
 
 .animal {
@@ -186,6 +184,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .petStatus {
@@ -455,4 +454,8 @@ ul a:hover {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.entireData{
+  padding-bottom: 50px;
 }

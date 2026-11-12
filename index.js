@@ -7,8 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("./public"));
 
-const { viewResources } = require('./utils/viewResourceUtil')
+const { viewResources, viewResourceById } = require('./utils/viewResourceUtil')
 app.get('/view-resources', viewResources)
+app.get('/view-resources/:id', viewResourceById)
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);

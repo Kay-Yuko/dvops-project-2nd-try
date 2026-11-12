@@ -1,0 +1,17 @@
+# Default ownership
+* @Kay-Yuko @JoenChow07 @Samuelykw
+
+# Shared frontend files
+/public/index.html @Kay-Yuko @JoenChow07 @Samuelykw
+/public/css/styles.css @Kay-Yuko @JoenChow07 @Samuelykw
+
+# Shared backend and database
+/index.js @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/pets.json @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/pets.template.json @Kay-Yuko @JoenChow07 @Samuelykw
+
+# SCM documentation
+/docs/ @Samuelykw
+
+# CODEOWNERS maintenance
+/.github/CODEOWNERS @Samuelykw @Kay-Yuko

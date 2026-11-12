@@ -16,10 +16,11 @@ function viewResources() {
         var html = '';
 
         for (var i = 0; i < response.length; i++) {
-            html += '<div class="animal">' +
+            html += '<a href="Details.html?id=' + response[i].id + '">' +
+            '<div class="animal">' +
                 '<div class="petImage">' +
                 '<div class="petStatus">' + response[i].status + '</div>' +
-                '</div>' +
+            '</div>' +
 
                 '<div class="animalInfo">' +
                 '<p>' +
@@ -32,7 +33,8 @@ function viewResources() {
                 '<div>' + response[i].breed + '</div>' +
                 '</div>' +
                 '</div>' +
-                '</div>';
+                '</div>' +
+                '</a>';
         }
 
         document.getElementById('animalList').innerHTML = html;

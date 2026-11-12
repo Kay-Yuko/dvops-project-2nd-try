@@ -1,24 +1,23 @@
-
 /* =========================
    GENERAL STYLING
 ========================= */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    color: #014B43;
-    background-color: #014B43;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  color: #014B43;
+  background-color: #014B43;
 }
 
 
@@ -27,36 +26,48 @@ body {
 ========================= */
 
 .hero {
-    width: 100%;
-    height: 300px;
-    background-image: url("../images/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-start;
-    padding: 50px;
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px;
+}
+
+.hero-details {
+  width: 100%;
+  height: 150px;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px;
 }
 
 .heroContent {
-    background-color: #014B43;
-    color: white;
-    padding-left: 30px;
-    border-radius: 12px;
-    width: 95%;
-    max-width: 1440px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
+  background-color: #014B43;
+  color: white;
+  padding-left: 30px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 1440px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-    object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  object-fit: cover;
 }
 
 
@@ -65,80 +76,80 @@ body {
 ========================= */
 
 .filterContent {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .filterArea {
-    background-color: white;
-    width: 70%;
-    max-width: 1100px;
-    padding: 20px;
-    margin: 30px auto;
-    border-radius: 12px;
-    font-weight: bold;
+  background-color: white;
+  width: 70%;
+  max-width: 1100px;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  font-weight: bold;
 }
 
 .filterAnimals {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .filterDropDown {
-    display: flex;
-    gap: 30px;
-    margin-top: 15px;
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
 }
 
 .filterAnimals label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .filterAnimals input {
-    width: 70%;
-    height: 40px;
-    padding: 5px 12px;
+  width: 70%;
+  height: 40px;
+  padding: 5px 12px;
 }
 
 .filterAnimals select {
-    width: 100%;
-    height: 40px;
-    padding: 5px 12px;
-    margin-right: 30px;
+  width: 100%;
+  height: 40px;
+  padding: 5px 12px;
+  margin-right: 30px;
 }
 
 .filterAnimals input,
 .filterAnimals select {
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 1px solid #014B43;
-    background-color: white;
-    font-family: inherit;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #014B43;
+  background-color: white;
+  font-family: inherit;
 }
 
 .filterAnimals input:focus,
 .filterAnimals select:focus {
-    outline: none;
-    border: 2px solid #014B43;
+  outline: none;
+  border: 2px solid #014B43;
 }
 
 .dropDown label {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 .clear {
-    margin-left: auto;
-    background-color: #014B43;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+  margin-left: auto;
+  background-color: #014B43;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 
@@ -147,106 +158,130 @@ body {
 ========================= */
 
 #animalList {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
-
-    width: 90%;
-    max-width: 1520px;
-
-    margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1520px;
+  margin: 0 auto 50px auto;
 }
 
 .animal {
-    width: 100%;
-    min-width: 0;
-    height: auto;
-    border-radius: 12px;
-    background-color: white;
-    overflow: hidden;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  border-radius: 12px;
+  background-color: white;
+  overflow: hidden;
 }
 
 .petImage {
-    width: 100%;
-    height: 250px;
-    background-image: url("../images/dummy.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/dummy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .petStatus {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: #d1fae5;
-    color: #065f46;
-    padding: 10px 12px;
-    border-radius: 6px;
-    font-size: 16px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .animalInfo {
-    background-color: white;
-    padding: 15px;
-    border-radius: 0 0 12px 12px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0 0 12px 12px;
 }
 
 .animalInfo p {
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .animalTags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .animalTags div {
-    background-color: #065f46;
-    color: white;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 8px;
+  background-color: #065f46;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
 .animalTags p {
-    font-weight: normal;
-    margin-bottom: 5px;
+  font-weight: normal;
+  margin-bottom: 5px;
 }
 
 
 /* =========================
-   ADD BUTTON
+  CRUD BUTTON
 ========================= */
 
 .addbtn {
-    position: fixed;
-    bottom: 45px;
-    right: 45px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-    transition: transform 0.2s ease;
-    color: white;
-    z-index: 1000;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.2s ease;
+  color: white;
+  z-index: 1000;
 }
 
-.addbtn:hover {
-    transform: scale(1.08);
-    background-color: white;
+.editbtn {
+  position: fixed;
+  bottom: 130px;
+  right: 45px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.2s ease;
+  color: white;
+  z-index: 1000;
 }
 
-.plusicon {
-    color: #014B43;
-    text-align: center;
-    margin: 10px auto;
-    font-size: 180%;
+.deletebtn {
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.2s ease;
+  color: white;
+  z-index: 1000;
+}
+
+.crudicon:hover {
+  transform: scale(1.08);
+}
+
+.crudicon {
+  color: #014B43;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 180%;
 }
 
 
@@ -255,12 +290,12 @@ body {
 ========================= */
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul a:hover {
-    color: white;
+  color: white;
 }
 
 
@@ -270,78 +305,157 @@ ul a:hover {
 
 /* Smaller desktop screens and laptops */
 @media (max-width: 1200px) {
-    #animalList {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  #animalList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
-    .filterArea {
-        width: 85%;
-    }
+  .filterArea {
+    width: 85%;
+  }
 }
 
 /* Tablets */
 @media (max-width: 900px) {
-    #animalList {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-    }
+  #animalList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
 
-    .filterArea {
-        width: 90%;
-    }
+  .filterArea {
+    width: 90%;
+  }
 
-    .hero {
-        padding: 30px;
-    }
+  .hero {
+    padding: 30px;
+  }
 }
 
 /* Mobile screens */
 @media (max-width: 600px) {
-    #animalList {
-        grid-template-columns: 1fr;
-        width: 90%;
-        gap: 20px;
-    }
+  #animalList {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 20px;
+  }
 
-    .filterArea {
-        width: 90%;
-        padding: 15px;
-    }
+  .filterArea {
+    width: 90%;
+    padding: 15px;
+  }
 
-    .filterDropDown {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .filterDropDown {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .filterAnimals input,
-    .filterAnimals select {
-        width: 100%;
-    }
+  .filterAnimals input,
+  .filterAnimals select {
+    width: 100%;
+  }
 
-    .hero {
-        height: 220px;
-        padding: 20px;
-    }
+  .hero {
+    height: 220px;
+    padding: 20px;
+  }
 
-    .heroContent {
-        width: 100%;
-        padding-left: 15px;
-    }
+  .heroContent {
+    width: 100%;
+    padding-left: 15px;
+  }
 
-    .addbtn {
-        bottom: 20px;
-        right: 20px;
-    }
+  .addbtn {
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 
 /* Error Handling */
 .no-results {
-    grid-column: 1 / -1;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    padding: 40px 0;
-    margin: 0;
+  grid-column: 1 / -1;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 40px 0;
+  margin: 0;
+}
+
+
+/* =========================
+   PET DETAILS PAGE
+========================= */
+
+.back {
+  margin: 40px;
+  background-color: white;
+  color: #014B43;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.animalTags-details {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+
+.animalTags-details div {
+  background-color: white;
+  color: #014B43;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.animalTags-details p {
+  margin: auto;
+}
+
+.animalName {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+.animalDetails {
+  display: flex;
+}
+
+.animalImage img{
+  width: 60%;
+  height: 450px;
+  margin-left: 120px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.animalDescription {
+  width: 40%;
+  transform: translateX(-100px);
+}
+
+.adoptbutton {
+  margin-top: 40px;
+  background-color: white;
+  color: #014B43;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.entireData{
+  padding-bottom: 50px;
 }

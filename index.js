@@ -10,6 +10,9 @@ app.use(express.static("./public"));
 const { viewResources, viewResourceById } = require('./utils/viewResourceUtil')
 app.get('/view-resources', viewResources)
 app.get('/view-resources/:id', viewResourceById)
+const { filterResources } = require('./utils/filterUtil');
+app.get('/filter-resources', filterResources);
+
 
 const { addResource } = require('./utils/addResourceUtil')
 app.post('/add-resource', addResource);

@@ -7,11 +7,15 @@
 
 # Shared backend and database
 /index.js @Kay-Yuko @JoenChow07 @Samuelykw
-/utils/pets.json @Kay-Yuko @JoenChow07 @Samuelykw
-/utils/pets.template.json @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/resources.json @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/resources.template.json @Kay-Yuko @JoenChow07 @Samuelykw
 
 # SCM documentation
 /docs/ @Samuelykw
 
 # CODEOWNERS maintenance
 /.github/CODEOWNERS @Samuelykw @Kay-Yuko
+
+# Samuel's pet filtering feature
+/public/js/filter-animal.js @Samuelykw
+/utils/filterUtil.js @Samuelykw

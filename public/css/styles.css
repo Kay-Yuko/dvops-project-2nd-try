@@ -531,3 +531,77 @@ ul a:hover {
 .entireData {
   padding-bottom: 50px;
 }
+
+
+/* =========================
+ POPUP
+========================= */
+
+.Popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.PopupContent {
+  background-color: white;
+  color: #014B43;
+  width: 800px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.PopupContent h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.PopupContent label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.PopupContent input,
+.PopupContent select,
+.PopupContent textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #014B43;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.PopupContent textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.PopupRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.PopupButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.PopupButtons button {
+  border-radius: 8px;
+  padding: 8px;
+  color: white;
+  background-color: #014B43;
+}

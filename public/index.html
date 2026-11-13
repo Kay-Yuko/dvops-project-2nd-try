@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="js/view-resources.js"></script>
+    <script src="js/update-animal-breed.js"></script>
+    <script src="js/add-resouce.js"></script>
 
     <script>
         // Get the ID from the URL
@@ -152,12 +154,80 @@
 
     </div>
 
-    <a href="" class="addbtn">
+    <a href="" class="addbtn" onclick="document.getElementById('Popup').style.display='flex'; return false;">
         <p class="crudicon">
             +
         </p>
     </a>
 
+    <!-- Edit Animal Popup -->
+    <div class="Popup" id="Popup">
+        <div class="PopupContent">
+            <h2>Add Animal</h2>
+
+            <label>Animal Name</label>
+            <input type="text" id="name" placeholder="Animal name">
+
+            <label>Image URL</label>
+            <input id='image' type="text" placeholder="e.g. images/dummy.jpg">
+
+            <div class="PopupRow">
+                <div>
+                    <label>Gender</label>
+                    <select id="gender">
+                        <option>-- Select Gender --</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Age</label>
+                    <select id="age">
+                        <option>-- Select Age --</option>
+                        <option>Adult</option>
+                        <option>Teen</option>
+                        <option>Child</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="PopupRow">
+                <div>
+                    <label>Species</label>
+                    <select name="species_id" id="addSpecies" onchange="updateBreeds()" required>
+                        <option value="">-- Select Species --</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Rabbit">Rabbit</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Breed</label>
+                    <select id="addBreed" name="breed_id" required>
+                        <option value="">-- Select Breed --</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <label>Status</label>
+            <select id="status">
+                <option>-- Select Status --</option>
+                <option>Available</option>
+                <option>Adopted</option>
+                <option>Reserved</option>
+            </select>
+
+            <label>Description</label>
+            <textarea placeholder="Animal description" id="description"></textarea>
+
+            <div class="PopupButtons">
+                <button onclick="document.getElementById('Popup').style.display='none'">Cancel</button>
+                <button onclick="addResource()">Add Animal</button>
+            </div>
+        </div>
+    </div>
 
 
 

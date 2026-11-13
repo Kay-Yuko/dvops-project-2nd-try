@@ -285,10 +285,10 @@ body {
 }
 
 /* =========================
-   EDIT POPUP
+   POPUP
 ========================= */
 
-.editPopup {
+.Popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -303,7 +303,7 @@ body {
   z-index: 1000;
 }
 
-.editPopupContent {
+.PopupContent {
   background-color: white;
   color: #014B43;
   width: 800px;
@@ -311,19 +311,19 @@ body {
   border-radius: 12px;
 }
 
-.editPopupContent h2 {
+.PopupContent h2 {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.editPopupContent label {
+.PopupContent label {
   display: block;
   margin-bottom: 5px;
 }
 
-.editPopupContent input,
-.editPopupContent select,
-.editPopupContent textarea {
+.PopupContent input,
+.PopupContent select,
+.PopupContent textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -333,24 +333,24 @@ body {
   font-family: inherit;
 }
 
-.editPopupContent textarea {
+.PopupContent textarea {
   height: 100px;
   resize: vertical;
 }
 
-.editPopupRow {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.PopupRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
-.editPopupButtons {
+.PopupButtons {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.editPopupButtons button {
+.PopupButtons button {
   border-radius: 8px;
   padding: 8px;
   color: white;

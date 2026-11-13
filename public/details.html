@@ -60,7 +60,7 @@
 
         </div>
     </div>
-    <a href="" class="editbtn" onclick="document.getElementById('editPopup').style.display='flex'; return false;">
+    <a href="" class="editbtn" onclick="document.getElementById('Popup').style.display='flex'; return false;">
         <p class="crudicon">🖍</p>
     </a>
 
@@ -72,8 +72,8 @@
 
 
     <!-- Edit Animal Popup -->
-    <div class="editPopup" id="editPopup">
-        <div class="editPopupContent">
+    <div class="Popup" id="Popup">
+        <div class="PopupContent">
             <h2>Edit Animal Details</h2>
 
             <label>Animal Name</label>
@@ -82,7 +82,7 @@
             <label>Image URL</label>
             <input type="text" placeholder="e.g. images/dummy.jpg">
 
-            <div class="editPopupRow">
+            <div class="PopupRow">
                 <div>
                     <label>Gender</label>
                     <select>
@@ -101,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="editPopupRow">
+            <div class="PopupRow">
                 <div>
                     <label>Status</label>
                     <select>
@@ -125,8 +125,8 @@
             <label>Description</label>
             <textarea placeholder="Animal description"></textarea>
 
-            <div class="editPopupButtons">
-                <button onclick="document.getElementById('editPopup').style.display='none'">Cancel</button>
+            <div class="PopupButtons">
+                <button onclick="document.getElementById('Popup').style.display='none'">Cancel</button>
                 <button>Save Changes</button>
             </div>
         </div>

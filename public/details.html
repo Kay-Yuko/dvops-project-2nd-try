@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="js/view-resources.js"></script>
-    <script src="js/animal-Details.js"></script>
+    <script src="js/animal-details.js"></script>
+    <script src="js/update-animal-breed.js"></script>
+    <script src="js/edit-resource.js"></script>
     <script>
         // Get the ID from the URL
         var params = new URLSearchParams(window.location.search);
@@ -60,7 +62,9 @@
 
         </div>
     </div>
-    <a href="" class="editbtn" onclick="document.getElementById('Popup').style.display='flex'; return false;">
+
+    <!-- swapped from opening overlay through html, to opening overlay through JavaScript -->
+    <a href="" class="editbtn" onclick="editResource(); return false;">
         <p class="crudicon">🖍</p>
     </a>
 
@@ -76,58 +80,61 @@
         <div class="PopupContent">
             <h2>Edit Animal Details</h2>
 
-            <label>Animal Name</label>
-            <input type="text" placeholder="Animal name">
+            <label for="name">Animal Name</label>
+            <input type="text" id="name" placeholder="Animal name">
 
             <label>Image URL</label>
-            <input type="text" placeholder="e.g. images/dummy.jpg">
+            <input type="text" id="image" placeholder="e.g. images/dummy.jpg">
 
             <div class="PopupRow">
                 <div>
-                    <label>Gender</label>
-                    <select>
-                        <option>Male</option>
-                        <option>Female</option>
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                     </select>
                 </div>
 
                 <div>
-                    <label>Age</label>
-                    <select>
-                        <option>Adult</option>
-                        <option>Teen</option>
-                        <option>Child</option>
+                    <label for="age">Age</label>
+                    <select id="age">
+                        <option value="adult">Adult</option>
+                        <option value="teen">Teen</option>
+                        <option value="child">Child</option>
                     </select>
                 </div>
             </div>
 
             <div class="PopupRow">
                 <div>
-                    <label>Status</label>
-                    <select>
-                        <option>Available</option>
-                        <option>Adopted</option>
-                        <option>Reserved</option>
+                    <label for="species">Species</label>
+                    <select id="editSpecies" name="species" onchange="updateBreeds('editSpecies', 'editBreed')" required>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="rabbit">Rabbit</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Breed</label>
+                    <select id="editBreed" name="breed" required>
                     </select>
                 </div>
 
-                <div>
-                    <label>Species</label>
-                    <select>
-                        <option>Select Species</option>
-                    </select>
-                </div>
             </div>
 
-            <label>Breed</label>
-            <input type="text" placeholder="Animal breed">
+            <label for="status">Status</label>
+            <select id="status">
+                <option value="available">Available</option>
+                <option value="adopted">Adopted</option>
+                <option value="reserved">Reserved</option>
+            </select>
 
-            <label>Description</label>
-            <textarea placeholder="Animal description"></textarea>
+            <label for="description">Description</label>
+            <textarea placeholder="Animal description" id="description"></textarea>
 
             <div class="PopupButtons">
                 <button onclick="document.getElementById('Popup').style.display='none'">Cancel</button>
-                <button>Save Changes</button>
+                <button id="updateButton">Save Changes</button>
             </div>
         </div>
     </div>

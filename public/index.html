@@ -176,8 +176,8 @@
                     <label>Gender</label>
                     <select id="gender">
                         <option>-- Select Gender --</option>
-                        <option>Male</option>
-                        <option>Female</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                     </select>
                 </div>
 
@@ -185,9 +185,9 @@
                     <label>Age</label>
                     <select id="age">
                         <option>-- Select Age --</option>
-                        <option>Adult</option>
-                        <option>Teen</option>
-                        <option>Child</option>
+                        <option value="adult">Adult</option>
+                        <option value="teen">Teen</option>
+                        <option value="child">Child</option>
                     </select>
                 </div>
             </div>
@@ -195,16 +195,16 @@
             <div class="PopupRow">
                 <div>
                     <label>Species</label>
-                    <select name="species_id" id="addSpecies" onchange="updateBreeds()" required>
+                    <select name="species" id="addSpecies" onchange="updateBreeds('addSpecies', 'addBreed')" required>
                         <option value="">-- Select Species --</option>
-                        <option value="Dog">Dog</option>
-                        <option value="Cat">Cat</option>
-                        <option value="Rabbit">Rabbit</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="rabbit">Rabbit</option>
                     </select>
                 </div>
                 <div>
                     <label>Breed</label>
-                    <select id="addBreed" name="breed_id" required>
+                    <select id="addBreed" name="breed" required>
                         <option value="">-- Select Breed --</option>
                     </select>
                 </div>
@@ -214,9 +214,9 @@
             <label>Status</label>
             <select id="status">
                 <option>-- Select Status --</option>
-                <option>Available</option>
-                <option>Adopted</option>
-                <option>Reserved</option>
+                <option value="available">Available</option>
+                <option value="adopted">Adopted</option>
+                <option value="reserved">Reserved</option>
             </select>
 
             <label>Description</label>

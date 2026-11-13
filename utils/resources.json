@@ -7,7 +7,7 @@
     "gender": "male",
     "status": "available",
     "species": "dog",
-    "breed": "breed 1",
+    "breed": "Poodle",
     "id": "1"
   },
   {
@@ -17,8 +17,8 @@
     "image": "images/dummy.jpg",
     "gender": "male",
     "status": "available",
-    "species": "dog",
-    "breed": "breed 2",
+    "species": "cat",
+    "breed": "Siamese",
     "id": "2"
   },
   {
@@ -28,8 +28,8 @@
     "image": "images/dummy.jpg",
     "gender": "male",
     "status": "available",
-    "species": "dog",
-    "breed": "breed 3",
+    "species": "rabbit",
+    "breed": "Polish",
     "id": "3"
   },
   {
@@ -39,8 +39,8 @@
     "image": "images/dummy.jpg",
     "gender": "male",
     "status": "available",
-    "species": "dog",
-    "breed": "breed 4",
+    "species": "rabbit",
+    "breed": "Polish",
     "id": "4"
   },
   {
@@ -51,7 +51,18 @@
     "gender": "male",
     "status": "available",
     "species": "dog",
-    "breed": "breed 3",
+    "breed": "Golden retriever",
     "id": "5"
+  },
+  {
+    "name": "testing",
+    "age": "adult",
+    "description": "test",
+    "image": "images/dummy.jpg",
+    "gender": "male",
+    "status": "available",
+    "species": "dog",
+    "breed": "Golden retriever",
+    "id": "1296a706-fc18-40dd-95fe-7cc6c0319364"
   }
 ]

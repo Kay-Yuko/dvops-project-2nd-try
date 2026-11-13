@@ -1,22 +1,23 @@
 
 const fs = require('fs').promises;
 const path = require('path');
+const { Resource } = require('./ResourceUtil');
 
 const RESOURCES_FILE = path.join('utils', 'resources.json');
 const TEMPLATE_FILE = path.join('utils', 'resources.template.json');
 
 async function addResource(req, res) {
     try {
-        const newResource = {
-            name: req.body.name,
-            image: req.body.image,
-            gender: req.body.gender,
-            age: req.body.age,
-            species: req.body.species,
-            breed: req.body.breed,
-            status: req.body.status,
-            description: req.body.description
-        };
+        const newResource = new Resource(
+            req.body.name,
+            req.body.age,
+            req.body.description,
+            req.body.image,
+            req.body.gender,
+            req.body.status,
+            req.body.species,
+            req.body.breed
+        );
 
         let resources = [];
 

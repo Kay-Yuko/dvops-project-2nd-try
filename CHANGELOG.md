@@ -21,4 +21,6 @@ This file records significant changes to the Pet Adoption Website.
 - Integrated the filtering API with the existing pet listing interface.
 
 ### Fixed
-- No additional bug fixes recorded for this release.
+- Fixed the Breed filter to display only breeds associated with the selected animal species.
+- Updated the Breed dropdown to include all breeds supported by the application, even when no animals of those breeds are currently listed.
+- Fixed the Breed dropdown to reset automatically when users change species or clear their filters.

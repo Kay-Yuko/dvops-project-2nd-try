@@ -20,6 +20,9 @@ app.post('/add-resource', addResource);
 const { editResource } = require('./utils/editResourceUtil');
 app.put('/edit-resource/:id', editResource);
 
+const { deleteResource } = require('./utils/deleteResourceUtil');
+app.delete('/delete-resource/:id', deleteResource);
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })

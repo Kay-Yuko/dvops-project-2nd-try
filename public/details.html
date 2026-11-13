@@ -60,10 +60,8 @@
 
         </div>
     </div>
-    <a href="" class="editbtn">
-        <p class="crudicon">
-            🖍
-        </p>
+    <a href="" class="editbtn" onclick="document.getElementById('editPopup').style.display='flex'; return false;">
+        <p class="crudicon">🖍</p>
     </a>
 
     <a href="" class="deletebtn">
@@ -72,6 +70,67 @@
         </p>
     </a>
 
+
+    <!-- Edit Animal Popup -->
+    <div class="editPopup" id="editPopup">
+        <div class="editPopupContent">
+            <h2>Edit Animal Details</h2>
+
+            <label>Animal Name</label>
+            <input type="text" placeholder="Animal name">
+
+            <label>Image URL</label>
+            <input type="text" placeholder="e.g. images/dummy.jpg">
+
+            <div class="editPopupRow">
+                <div>
+                    <label>Gender</label>
+                    <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Age</label>
+                    <select>
+                        <option>Adult</option>
+                        <option>Teen</option>
+                        <option>Child</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="editPopupRow">
+                <div>
+                    <label>Status</label>
+                    <select>
+                        <option>Available</option>
+                        <option>Adopted</option>
+                        <option>Reserved</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Species</label>
+                    <select>
+                        <option>Select Species</option>
+                    </select>
+                </div>
+            </div>
+
+            <label>Breed</label>
+            <input type="text" placeholder="Animal breed">
+
+            <label>Description</label>
+            <textarea placeholder="Animal description"></textarea>
+
+            <div class="editPopupButtons">
+                <button onclick="document.getElementById('editPopup').style.display='none'">Cancel</button>
+                <button>Save Changes</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

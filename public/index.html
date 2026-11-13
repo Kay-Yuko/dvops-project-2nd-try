@@ -7,6 +7,7 @@
     <script src="js/view-resources.js"></script>
     <script src="js/update-animal-breed.js"></script>
     <script src="js/add-resouce.js"></script>
+    <script src="js/filter-animal.js"></script>
 
     <script>
         // Get the ID from the URL
@@ -26,18 +27,19 @@
         </div>
     </section>
 
+
     <div class="filterArea">
         <div class="filterContent">
             <div class="filterAnimals">
 
-                <label for="name">search by name</label>
-                <input type="text" id="name" placeholder="name" name="name">
+                <label for="filterName">Search by name</label>
+                <input type="text" id="filterName" placeholder="Pet name" maxlength="80">
 
                 <div class="filterDropDown">
 
                     <div class="dropDown">
-                        <label for="gender">gender</label>
-                        <select name="gender" id="gender">
+                        <label for="filterGender">Gender</label>
+                        <select id="filterGender">
                             <option value="any">Any</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -45,18 +47,18 @@
                     </div>
 
                     <div class="dropDown">
-                        <label for="age">age</label>
-                        <select name="age" id="age">
+                        <label for="filterAge">Age</label>
+                        <select id="filterAge">
                             <option value="any">Any</option>
-                            <option value="adult">Adult</option>
-                            <option value="teen">Teen</option>
                             <option value="child">Child</option>
+                            <option value="teen">Teen</option>
+                            <option value="adult">Adult</option>
                         </select>
                     </div>
 
                     <div class="dropDown">
-                        <label for="species">species</label>
-                        <select name="species" id="species">
+                        <label for="filterSpecies">Species</label>
+                        <select id="filterSpecies">
                             <option value="any">Any</option>
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
@@ -65,23 +67,22 @@
                     </div>
 
                     <div class="dropDown">
-                        <label for="breed">breed</label>
-                        <select name="breed" id="breed">
-                            <option value="breed1">breed1</option>
-                            <option value="breed2">breed2</option>
-                            <option value="breed3">breed3</option>
-                            <option value="breed4">breed4</option>
+                        <label for="filterBreed">Breed</label>
+                        <select id="filterBreed">
+                            <option value="any">Any</option>
                         </select>
                     </div>
+
                 </div>
             </div>
 
-            <button class="clear">
-                <p>clear</p>
+            <button type="button" class="clear" id="clearFilters">
+                Clear
             </button>
 
         </div>
     </div>
+
 
     <div class="animalList" id='animalList'>
 

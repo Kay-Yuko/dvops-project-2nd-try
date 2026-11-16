@@ -167,53 +167,48 @@
     }
 
     // Load breeds from the existing animal database.
-    async function populateBreeds() {
-        const select = element('breed');
 
-        try {
-            const response = await fetch('/view-resources');
+    function populateBreeds() {
+        const species = element('species').value;
+        const breedSelect = element('breed');
 
-            if (!response.ok) {
-                throw new Error('Unable to load breeds.');
-            }
+        // Use the same breed list as the Add and Edit Animal forms.
+        const breeds = species === 'any'
+            ? Object.values(breedsBySpecies).flat()
+            : (breedsBySpecies[species] || []);
 
-            const animals = await response.json();
+        // Remove duplicate breeds and sort alphabetically.
+        const uniqueBreeds = [...new Set(breeds)]
+            .sort((a, b) => a.localeCompare(b));
 
-            if (!Array.isArray(animals)) {
-                throw new Error('Invalid animal list.');
-            }
+        // Reset the dropdown and its previous selection.
+        breedSelect.replaceChildren(new Option('Any', 'any'));
 
-            const breeds = [
-                ...new Set(
-                    animals
-                        .map((animal) =>
-                            String(animal.breed ?? '').trim()
-                        )
-                        .filter(Boolean)
-                )
-            ].sort((a, b) => a.localeCompare(b));
+        // Add breeds belonging to the selected species.
+        uniqueBreeds.forEach(function (breed) {
+            breedSelect.add(new Option(breed, breed));
+        });
 
-            select.replaceChildren(new Option('Any', 'any'));
-
-            for (const breed of breeds) {
-                select.add(new Option(breed, breed));
-            }
-
-        } catch (error) {
-            console.error('Could not populate breeds:', error);
-        }
+        // Clear the previous breed filter.
+        breedSelect.value = 'any';
     }
 
+
     // Reset all filters to their default values.
+
     function clearPetFilters() {
         for (const field of fields) {
             element(field).value =
                 field === 'name' ? '' : 'any';
         }
 
+        // Restore the complete list of supported breeds.
+        populateBreeds();
+
         clearTimeout(typingTimer);
         applyPetFilters();
     }
+
 
     // Register frontend event listeners.
     document.addEventListener('DOMContentLoaded', () => {
@@ -229,12 +224,20 @@
                         250
                     );
                 });
+
             } else {
-                control.addEventListener(
-                    'change',
-                    applyPetFilters
-                );
+                control.addEventListener('change', () => {
+
+                    // Update breed options whenever species changes.
+                    if (field === 'species') {
+                        populateBreeds();
+                    }
+
+                    // Refresh the animal listing.
+                    applyPetFilters();
+                });
             }
+
         }
 
         document

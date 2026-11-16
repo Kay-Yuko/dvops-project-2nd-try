@@ -8,6 +8,7 @@
     <script src="js/animal-details.js"></script>
     <script src="js/update-animal-breed.js"></script>
     <script src="js/edit-resource.js"></script>
+    <script src="js/delete-animal.js"></script>
     <script>
         // Get the ID from the URL
         var params = new URLSearchParams(window.location.search);
@@ -68,11 +69,10 @@
         <p class="crudicon">🖍</p>
     </a>
 
-    <a href="" class="deletebtn">
-        <p class="crudicon">
-            🗑
-        </p>
-    </a>
+
+    <button type="button" class="deletebtn" id="deleteAnimalButton" aria-label="Delete animal">
+        <span class="crudicon">🗑</span>
+    </button>
 
 
     <!-- Edit Animal Popup -->
@@ -108,7 +108,8 @@
             <div class="PopupRow">
                 <div>
                     <label for="species">Species</label>
-                    <select id="editSpecies" name="species" onchange="updateBreeds('editSpecies', 'editBreed')" required>
+                    <select id="editSpecies" name="species" onchange="updateBreeds('editSpecies', 'editBreed')"
+                        required>
                         <option value="dog">Dog</option>
                         <option value="cat">Cat</option>
                         <option value="rabbit">Rabbit</option>

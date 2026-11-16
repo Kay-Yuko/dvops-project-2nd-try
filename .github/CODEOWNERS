@@ -3,12 +3,14 @@
 
 # Shared frontend files
 /public/index.html @Kay-Yuko @JoenChow07 @Samuelykw
+/public/detail.html @Kay-Yuko @JoenChow07 @Samuelykw
 /public/css/styles.css @Kay-Yuko @JoenChow07 @Samuelykw
 
 # Shared backend and database
 /index.js @Kay-Yuko @JoenChow07 @Samuelykw
 /utils/resources.json @Kay-Yuko @JoenChow07 @Samuelykw
 /utils/resources.template.json @Kay-Yuko @JoenChow07 @Samuelykw
+/public/js/update-animal-breed @Kay-Yuko @JoenChow07 @Samuelykw
 
 # SCM documentation
 /docs/ @Samuelykw
@@ -24,3 +26,15 @@
 /public/js/edit-resource.js @Kay-Yuko
 /public/utils/editResourceUtil.js @Kay-Yuko
 
+# joens's pet add feature
+/public/js/add-resource.js @JoenChow07
+/utils/addResourceUtil.js @JoenChow07
+
+# commit-msg maintenance
+/.githooks/commit-msg @JoenChow07
+
+# pre-commit maintenance
+/.githooks/pre-commit @JoenChow07
+
+# .gitattributes maintenance
+/.gitattributes @JoenChow07

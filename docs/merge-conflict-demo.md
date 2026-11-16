@@ -1,1 +1,1 @@
-This is a practice conflict-resolution exercise.
+This is a requirement for recording testing result.

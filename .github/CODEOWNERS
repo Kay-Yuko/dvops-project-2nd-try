@@ -19,3 +19,8 @@
 # Samuel's pet filtering feature
 /public/js/filter-animal.js @Samuelykw
 /utils/filterUtil.js @Samuelykw
+
+# Kayden's edit animal feature
+/public/js/edit-resource.js @Kay-Yuko
+/public/utils/editResourceUtil.js @Kay-Yuko
+

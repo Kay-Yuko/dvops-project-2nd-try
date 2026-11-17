@@ -26,6 +26,9 @@
 /public/js/edit-resource.js @Kay-Yuko
 /public/utils/editResourceUtil.js @Kay-Yuko
 
+# Kayden's PULL_REQUEST_TEMPLATE
+/.github/PULL_REQUEST_TEMPLATE.md @Kay-Yuko
+
 # joens's pet add feature
 /public/js/add-resource.js @JoenChow07
 /utils/addResourceUtil.js @JoenChow07

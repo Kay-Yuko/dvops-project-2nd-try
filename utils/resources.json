@@ -55,14 +55,14 @@
     "id": "5"
   },
   {
-    "name": "testing",
+    "name": "2",
     "age": "adult",
-    "description": "test",
+    "description": "hbgyugyuvyiyiv",
     "image": "images/dummy.jpg",
     "gender": "male",
-    "status": "available",
+    "status": "adopted",
     "species": "dog",
-    "breed": "Golden retriever",
-    "id": "1296a706-fc18-40dd-95fe-7cc6c0319364"
+    "breed": "Corgi",
+    "id": "2341b26f-9f38-4cbd-90bc-1c9f5308aa40"
   }
 ]

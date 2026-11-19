@@ -2,7 +2,7 @@
   {
     "name": "john",
     "age": "teen",
-    "description": "long description",
+    "description": "Long description",
     "image": "images/dummy.jpg",
     "gender": "male",
     "status": "available",

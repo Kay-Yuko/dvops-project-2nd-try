@@ -1,11 +1,31 @@
 const fs = require('fs').promises;
 const path = require('path');
 const RESOURCES_FILE = path.join(__dirname, 'students.json');
+const { id } = req.params;
+
 async function editResource(req, res) {
     try {
         const { id } = req.params;
         const { name, image, gender, age, species, breed, status, description } = req.body;
+
+        // Backend validation
+        if (
+            typeof name !== 'string' || !name.trim() ||
+            typeof image !== 'string' || !image.trim() ||
+            typeof gender !== 'string' || !gender.trim() ||
+            age === undefined || age === null || String(age).trim() === '' ||
+            typeof species !== 'string' || !species.trim() ||
+            typeof breed !== 'string' || !breed.trim() ||
+            typeof status !== 'string' || !status.trim() ||
+            typeof description !== 'string' || !description.trim()
+        ) {
+            return res.status(400).json({
+                message: 'All fields are required and must be valid.'
+            });
+        }
+
         let resources = [];
+
         try {
             const data = await fs.readFile(RESOURCES_FILE, 'utf8');
             resources = JSON.parse(data);
@@ -20,6 +40,7 @@ async function editResource(req, res) {
         if (resourceIndex === -1) {
             return res.status(404).json({ message: 'Animal not found.' });
         }
+
         // Update resource fields
         resources[resourceIndex] = {
             // copies the existing animal's information into the new object.
@@ -44,4 +65,5 @@ async function editResource(req, res) {
         return res.status(500).json({ message: error.message });
     }
 }
+
 module.exports = { editResource };

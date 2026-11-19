@@ -1,3 +1,13 @@
+function checkAdminRole() {
+    var role = JSON.parse(sessionStorage.getItem("role"));
+
+    if (!role || role.id !== 2) {
+        alert("Access denied! Admin only.");
+        return false;
+    }
+
+    return true;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const deleteButton = document.querySelector('.deletebtn');
@@ -8,6 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     deleteButton.addEventListener('click', async function (event) {
         event.preventDefault();
+
+
+        if (!checkAdminRole()) {
+            return;
+        }
 
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');

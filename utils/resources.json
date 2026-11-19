@@ -64,5 +64,16 @@
     "species": "dog",
     "breed": "Golden retriever",
     "id": "1296a706-fc18-40dd-95fe-7cc6c0319364"
+  },
+  {
+    "name": "API Test Animal",
+    "age": "adult",
+    "description": "Animal created during API testing",
+    "image": "images/dummy.jpg",
+    "gender": "male",
+    "status": "available",
+    "species": "dog",
+    "breed": "Poodle",
+    "id": "77f88233-7f3c-445f-8df9-2a787700935a"
   }
 ]

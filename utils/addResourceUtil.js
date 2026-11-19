@@ -4,7 +4,6 @@ const path = require('path');
 const { Resource } = require('./ResourceUtil');
 
 const RESOURCES_FILE = path.join('utils', 'resources.json');
-const TEMPLATE_FILE = path.join('utils', 'resources.template.json');
 
 async function addResource(req, res) {
     try {
@@ -27,8 +26,7 @@ async function addResource(req, res) {
 
         } catch (err) {
             if (err.code === 'ENOENT') {
-                const templateData = await fs.readFile(TEMPLATE_FILE, 'utf8');
-                resources = JSON.parse(templateData);
+                resources = [];
             } else {
                 throw err;
             }

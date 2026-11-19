@@ -2,9 +2,10 @@
 function addResource() {
     var response = "";
 
+    // Get the Add Animal popup
     var popup = document.getElementById("Popup");
 
-    // Get values specifically from the Add Animal popup
+    // Create an object to hold form data
     var jsonData = new Object();
 
     jsonData.name = popup.querySelector("#name").value;
@@ -16,20 +17,37 @@ function addResource() {
     jsonData.status = popup.querySelector("#status").value;
     jsonData.description = popup.querySelector("#description").value;
 
+    // Validate required fields (all must be filled in)
+    if (jsonData.name == "" ||
+        jsonData.image == "" ||
+        jsonData.gender == "" ||
+        jsonData.age == "" ||
+        jsonData.species == "" ||
+        jsonData.breed == "" ||
+        jsonData.status == "" ||
+        jsonData.description == "") {
+
+        alert('All fields are required!');
+        return; // Stop execution if validation fails
+    }
+
+    // Configure the request to POST data to /add-resource
     var request = new XMLHttpRequest();
 
     request.open("POST", "/add-resource", true);
     request.setRequestHeader('Content-Type', 'application/json');
 
+    // Define what happens when the server responds
     request.onload = function () {
         response = JSON.parse(request.responseText);
 
         console.log(response);
 
+        // If animal is successfully added
         if (request.status == 201) {
             alert('Added Animal: ' + jsonData.name + '!');
 
-            // Clear popup fields
+            // Clear form fields after success
             popup.querySelector("#name").value = "";
             popup.querySelector("#image").value = "";
             popup.querySelector("#gender").value = "";
@@ -46,13 +64,11 @@ function addResource() {
             viewResources();
 
         } else {
-            alert('Unable to add animal: ' + response.message);
+            // Show error if animal could not be added
+            alert('Unable to add animal!');
         }
     };
 
-    request.onerror = function () {
-        alert("Unable to connect to server!");
-    };
-
+    // Send the request with JSON-formatted data
     request.send(JSON.stringify(jsonData));
 }

@@ -1,6 +1,21 @@
+function checkAdminRole() {
+    var role = JSON.parse(sessionStorage.getItem("role"));
+
+    if (!role || role.id !== 2) {
+        alert("Access denied! Admin only.");
+        return false;
+    }
+
+    return true;
+}
 
 // Function to open the edit popup and pre-fill it with the selected animal's data
 function editResource() {
+
+    if (!checkAdminRole()) {
+        return;
+    }
+
     var selectedResource = window.currentAnimal;
 
     // Pre-fill the popup input fields
@@ -26,6 +41,11 @@ function editResource() {
 
 // Function to send updated animal data to the backend API
 function updateResource(id) {
+
+    if (!checkAdminRole()) {
+        return;
+    }
+
     var response = "";
 
     // Create a JSON object from the popup input fields

@@ -8,6 +8,23 @@ const TEMPLATE_FILE = path.join('utils', 'students.template.json')
 
 async function addResource(req, res) {
     try {
+
+        // Backend validation
+        if (
+            typeof req.body.name !== 'string' || !req.body.name.trim() ||
+            typeof req.body.image !== 'string' || !req.body.image.trim() ||
+            typeof req.body.gender !== 'string' || !req.body.gender.trim() ||
+            req.body.age === undefined || req.body.age === null || String(req.body.age).trim() === '' ||
+            typeof req.body.species !== 'string' || !req.body.species.trim() ||
+            typeof req.body.breed !== 'string' || !req.body.breed.trim() ||
+            typeof req.body.status !== 'string' || !req.body.status.trim() ||
+            typeof req.body.description !== 'string' || !req.body.description.trim()
+        ) {
+            return res.status(400).json({
+                message: 'All fields are required and must be valid.'
+            });
+        }
+
         const newResource = new Resource(
             req.body.name,
             req.body.age,

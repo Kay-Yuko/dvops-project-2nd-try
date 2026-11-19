@@ -1,5 +1,20 @@
+function checkAdminRole() {
+    var role = JSON.parse(sessionStorage.getItem("role"));
+
+    if (!role || role.id !== 2) {
+        alert("Access denied! Admin only.");
+        return false;
+    }
+
+    return true;
+}
 
 function addResource() {
+
+    if (!checkAdminRole()) {
+        return;
+    }
+
     var response = "";
 
     // Get the Add Animal popup

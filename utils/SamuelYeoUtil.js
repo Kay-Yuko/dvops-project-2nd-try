@@ -2,7 +2,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const RESOURCES_FILE = path.join(__dirname, 'resources.json');
+const RESOURCES_FILE = path.join(__dirname, 'students.json');
 
 async function deleteResource(req, res) {
     const id = req.params.id;
@@ -62,11 +62,10 @@ async function deleteResource(req, res) {
     }
 }
 
-module.exports = { deleteResource };
 
 
-const fs = require('fs').promises;
-const path = require('path');
+
+
 
 const resources_file = path.join(__dirname, 'resources.json');
 
@@ -186,4 +185,7 @@ async function filterResources(req, res) {
     }
 }
 
-module.exports = { filterResources };
+module.exports = {
+    deleteResource,
+    filterResources
+};

@@ -65,11 +65,7 @@ async function deleteResource(req, res) {
 
 
 
-
-
-const resources_file = path.join(__dirname, 'resources.json');
-
-const allowedvalues= {
+const allowedvalues = {
     gender: ['male', 'female'],
     age: ['child', 'teen', 'adult'],
     species: ['dog', 'cat', 'rabbit']
@@ -112,8 +108,8 @@ function validateFilters(query) {
     }
 
     if (
-        filters.name.length > 80 
-        
+        filters.name.length > 80
+
     ) {
         throw new Error(
             'Invalid name. Use up to 80 characters without control characters.'
@@ -121,8 +117,8 @@ function validateFilters(query) {
     }
 
     if (
-        filters.breed.length > 80 
-       
+        filters.breed.length > 80
+
     ) {
         throw new Error(
             'Invalid breed. Use up to 80 characters without control characters.'
@@ -144,9 +140,10 @@ async function filterResources(req, res) {
         });
     }
 
+
     try {
         const contents = await fs.readFile(
-            resources_file,
+            RESOURCES_FILE,
             'utf8'
         );
 

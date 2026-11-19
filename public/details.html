@@ -9,6 +9,7 @@
     <script src="js/update-animal-breed.js"></script>
     <script src="js/edit-resource.js"></script>
     <script src="js/delete-animal.js"></script>
+    <script src="js/role-switching.js"></script>
     <script>
         // Get the ID from the URL
         var params = new URLSearchParams(window.location.search);
@@ -18,11 +19,15 @@
     </script>
 </head>
 
-<body style="color: white;" onload="viewAnimalDetails()">
+<body style="color: white;" onload="viewAnimalDetails(); updateRoleUI()">
     <section class="hero-details">
         <div class="heroContent">
             <img class="logo" src="images/dummy.jpg">
             <h2>Site Name | Home</h2>
+
+            <button id="roleSwitch" class="roleSwitch" onclick="switchRole()">
+                Switch to Admin
+            </button>
         </div>
     </section>
 
@@ -65,10 +70,9 @@
     </div>
 
     <!-- swapped from opening overlay through html, to opening overlay through JavaScript -->
-    <a href="" class="editbtn" onclick="editResource(); return false;">
+    <a href="" class="editbtn" id="editButton" onclick="editResource(); return false;">
         <p class="crudicon">🖍</p>
     </a>
-
 
     <button type="button" class="deletebtn" id="deleteAnimalButton" aria-label="Delete animal">
         <span class="crudicon">🗑</span>

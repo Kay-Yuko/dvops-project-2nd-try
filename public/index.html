@@ -8,6 +8,7 @@
     <script src="js/update-animal-breed.js"></script>
     <script src="js/add-resouce.js"></script>
     <script src="js/filter-animal.js"></script>
+    <script src="js/role-switching.js"></script>
 
     <script>
         // Get the ID from the URL
@@ -18,12 +19,16 @@
     </script>
 </head>
 
-<body onload="viewResources()">
+<body onload="viewResources(); updateRoleUI()">
 
     <section class="hero">
         <div class="heroContent">
             <img class="logo" src="images/dummy.jpg">
             <h2>Site Name | Home</h2>
+
+            <button id="roleSwitch" class="roleSwitch" onclick="switchRole()">
+                Switch to Admin
+            </button>
         </div>
     </section>
 

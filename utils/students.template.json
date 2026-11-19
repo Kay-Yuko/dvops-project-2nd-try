@@ -1,0 +1,13 @@
+[
+    {
+        "name": "john",
+        "age": "teen",
+        "description": "long description",
+        "image": "images/dummy.jpg",
+        "gender": "male",
+        "status": "available",
+        "species": "dog",
+        "breed": "Poodle",
+        "id": "1"
+    }
+]

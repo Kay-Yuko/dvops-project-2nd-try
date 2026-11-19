@@ -7,20 +7,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("./public"));
 
-const { viewResources, viewResourceById } = require('./utils/viewResourceUtil')
+const {viewResources, viewResourceById } = require('./utils/StudentsUtil');
 app.get('/view-resources', viewResources)
 app.get('/view-resources/:id', viewResourceById)
-const { filterResources } = require('./utils/filterUtil');
+const {filterResources} = require('./utils/SamuelYeoUtil');
 app.get('/filter-resources', filterResources);
 
 
-const { addResource } = require('./utils/addResourceUtil')
+const {addResource} = require('./utils/JoenChowUtil');
 app.post('/add-resource', addResource);
 
-const { editResource } = require('./utils/editResourceUtil');
+const {editResource} = require('./utils/KaydenTanUtil');
 app.put('/edit-resource/:id', editResource);
 
-const { deleteResource } = require('./utils/deleteResourceUtil');
+const {deleteResource} = require('./utils/SamuelYeoUtil');
 app.delete('/delete-resource/:id', deleteResource);
 
 app.get('/', (req, res) => {

@@ -1,9 +1,9 @@
 
 const fs = require('fs').promises;
 const path = require('path');
-const { Resource } = require('./ResourceUtil');
+const { Resource } = require('./StudentsUtil');
 
-const RESOURCES_FILE = path.join('utils', 'resources.json');
+const RESOURCES_FILE = path.join(__dirname, 'students.json');
 
 async function addResource(req, res) {
     try {

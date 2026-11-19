@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const RESOURCES_FILE = path.join('utils', 'resources.json');
+const RESOURCES_FILE = path.join(__dirname, 'students.json');
 
 async function viewResources(req, res) {
     try {
@@ -42,4 +42,27 @@ async function viewResourceById(req, res) {
     }
 }
 
-module.exports = { viewResources, viewResourceById };
+
+
+const { randomUUID } = require('crypto');
+
+class Resource {
+    constructor(name, age, description, image, gender, status, species, breed) {
+        this.name = name;
+        this.age = age;
+        this.description = description;
+        this.image = image;
+        this.gender = gender;
+        this.status = status;
+        this.species = species;
+        this.breed = breed;
+        this.id = randomUUID();
+    }
+}
+
+
+module.exports = {
+    viewResources,
+    viewResourceById,
+    Resource
+};

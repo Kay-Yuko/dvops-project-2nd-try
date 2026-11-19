@@ -2,9 +2,70 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const resources_file = path.join(__dirname, 'resources.json');
+const RESOURCES_FILE = path.join(__dirname, 'students.json');
 
-const allowedvalues= {
+async function deleteResource(req, res) {
+    const id = req.params.id;
+
+    // Validate the animal ID.
+    if (
+        typeof id !== 'string' ||
+        id.trim() === '' ||
+        id.length > 100
+    ) {
+        return res.status(400).json({
+            message: 'Invalid animal ID.'
+        });
+    }
+
+    try {
+        const data = await fs.readFile(RESOURCES_FILE, 'utf8');
+        const resources = JSON.parse(data);
+
+        if (!Array.isArray(resources)) {
+            return res.status(500).json({
+                message: 'Invalid animal database.'
+            });
+        }
+
+        const animalIndex = resources.findIndex(
+            animal => String(animal.id) === id
+        );
+
+        if (animalIndex === -1) {
+            return res.status(404).json({
+                message: 'Animal not found.'
+            });
+        }
+
+        const deletedAnimal = resources[animalIndex];
+
+        resources.splice(animalIndex, 1);
+
+        await fs.writeFile(
+            RESOURCES_FILE,
+            JSON.stringify(resources, null, 2),
+            'utf8'
+        );
+
+        return res.status(200).json({
+            message: 'Animal deleted successfully.',
+            animal: deletedAnimal
+        });
+
+    } catch (error) {
+        console.error('Delete animal error:', error);
+
+        return res.status(500).json({
+            message: 'Unable to delete animal.'
+        });
+    }
+}
+
+
+
+
+const allowedvalues = {
     gender: ['male', 'female'],
     age: ['child', 'teen', 'adult'],
     species: ['dog', 'cat', 'rabbit']
@@ -47,8 +108,8 @@ function validateFilters(query) {
     }
 
     if (
-        filters.name.length > 80 
-        
+        filters.name.length > 80
+
     ) {
         throw new Error(
             'Invalid name. Use up to 80 characters without control characters.'
@@ -56,8 +117,8 @@ function validateFilters(query) {
     }
 
     if (
-        filters.breed.length > 80 
-       
+        filters.breed.length > 80
+
     ) {
         throw new Error(
             'Invalid breed. Use up to 80 characters without control characters.'
@@ -79,9 +140,10 @@ async function filterResources(req, res) {
         });
     }
 
+
     try {
         const contents = await fs.readFile(
-            resources_file,
+            RESOURCES_FILE,
             'utf8'
         );
 
@@ -120,4 +182,7 @@ async function filterResources(req, res) {
     }
 }
 
-module.exports = { filterResources };
+module.exports = {
+    deleteResource,
+    filterResources
+};

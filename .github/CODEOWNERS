@@ -3,7 +3,7 @@
 
 # Shared frontend files
 /public/index.html @Kay-Yuko @JoenChow07 @Samuelykw
-/public/detail.html @Kay-Yuko @JoenChow07 @Samuelykw
+/public/details.html @Kay-Yuko @JoenChow07 @Samuelykw
 /public/css/styles.css @Kay-Yuko @JoenChow07 @Samuelykw
 
 # Shared backend and database
@@ -33,11 +33,7 @@
 /public/js/add-resource.js @JoenChow07
 /utils/addResourceUtil.js @JoenChow07
 
-# commit-msg maintenance
+# githooks maintenance
 /.githooks/commit-msg @JoenChow07
-
-# pre-commit maintenance
 /.githooks/pre-commit @JoenChow07
-
-# .gitattributes maintenance
 /.gitattributes @JoenChow07

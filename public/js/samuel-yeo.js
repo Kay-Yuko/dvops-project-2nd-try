@@ -285,6 +285,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Register frontend event listeners.
     document.addEventListener('DOMContentLoaded', () => {
+        // Filtering controls only exist on the homepage.
+        if (
+            !document.getElementById('filterName') ||
+            !document.getElementById('animalList')
+        ) {
+            return;
+        }
+
         for (const field of fields) {
             const control = element(field);
 

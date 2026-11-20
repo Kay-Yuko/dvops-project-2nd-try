@@ -26,4 +26,4 @@ jobs:
         run: npm ci
 
       - name: Check JavaScript syntax
-        run: node --check index.js
+        run: run: node -e "const {server} = require('./index'); server.close();"

@@ -51,6 +51,7 @@ function addResource() {
 
     request.open("POST", "/add-resource", true);
     request.setRequestHeader('Content-Type', 'application/json');
+    request.setRequestHeader('roleId', currentRole.id);
 
     // Define what happens when the server responds
     request.onload = function () {

@@ -79,6 +79,7 @@ function updateResource(id) {
     var request = new XMLHttpRequest();
     request.open("PUT", "/edit-resource/" + id, true);
     request.setRequestHeader('Content-Type', 'application/json');
+    request.setRequestHeader('roleId', currentRole.id);
 
     request.onload = function () {
         response = JSON.parse(request.responseText);

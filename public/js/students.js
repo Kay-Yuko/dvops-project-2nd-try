@@ -123,7 +123,7 @@ function updateRoleUI() {
     var deleteButton = document.getElementById("deleteAnimalButton");
     var roleButton = document.getElementById("roleSwitch");
 
-    if (currentRole.id === 1) {
+    if (currentRole.id === 2) {
         if (addButton) addButton.style.display = "none";
         if (editButton) editButton.style.display = "none";
         if (deleteButton) deleteButton.style.display = "none";

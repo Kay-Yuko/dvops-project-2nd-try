@@ -45,7 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const response = await fetch(
                 '/delete-resource/' + encodeURIComponent(id),
-                { method: 'DELETE' }
+                {
+                    method: 'DELETE',
+                    headers: {
+                        'roleId': currentRole.id
+                    }
+                }
             );
 
             const result = await response.json();

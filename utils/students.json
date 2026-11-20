@@ -57,7 +57,7 @@
   {
     "name": "testing",
     "age": "adult",
-    "description": "test",
+    "description": "test1",
     "image": "images/dummy.jpg",
     "gender": "male",
     "status": "available",

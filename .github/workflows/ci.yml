@@ -26,4 +26,13 @@ jobs:
         run: npm ci
 
       - name: Check JavaScript syntax
-        run: run: node -e "const {server} = require('./index'); server.close();"
+        run: |
+          node --check index.js
+          for file in utils/*.js public/js/*.js; do
+            node --check "$file"
+          done
+
+     
+      - name: Verify application startup
+        run: node -e "const { server } = require('./index'); server.on('listening', () => server.close());"
+

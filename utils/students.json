@@ -55,14 +55,14 @@
     "id": "5"
   },
   {
-    "name": "testing",
+    "name": "Bob",
     "age": "adult",
-    "description": "test1",
+    "description": "A friendly dog.",
     "image": "images/dummy.jpg",
     "gender": "male",
     "status": "available",
     "species": "dog",
-    "breed": "Golden retriever",
+    "breed": "Poodle",
     "id": "1296a706-fc18-40dd-95fe-7cc6c0319364"
   }
 ]

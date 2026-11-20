@@ -2,6 +2,29 @@ const fs = require('fs').promises;
 const path = require('path');
 const RESOURCES_FILE = path.join(__dirname, 'students.json');
 
+const allowedGenders = ['male', 'female'];
+const allowedAges = ['adult', 'teen', 'child'];
+const allowedSpecies = ['dog', 'cat', 'rabbit'];
+const allowedStatuses = ['available', 'adopted', 'reserved'];
+
+const breedsBySpecies = {
+    dog: [
+        'Golden retriever',
+        'Corgi',
+        'Poodle'
+    ],
+    cat: [
+        'Siamese',
+        'Maine coon',
+        'Ragdoll'
+    ],
+    rabbit: [
+        'Holland lop',
+        'Netherland dwarf',
+        'Polish'
+    ]
+};
+
 async function editResource(req, res) {
     try {
         const { id } = req.params;
@@ -20,6 +43,38 @@ async function editResource(req, res) {
         ) {
             return res.status(400).json({
                 message: 'All fields are required and must be valid.'
+            });
+        }
+
+        // Validate dropdown values
+        if (!allowedGenders.includes(gender)) {
+            return res.status(400).json({
+                message: 'Invalid gender.'
+            });
+        }
+
+        if (!allowedAges.includes(age)) {
+            return res.status(400).json({
+                message: 'Invalid age category.'
+            });
+        }
+
+        if (!allowedSpecies.includes(species)) {
+            return res.status(400).json({
+                message: 'Invalid species.'
+            });
+        }
+
+        if (!allowedStatuses.includes(status)) {
+            return res.status(400).json({
+                message: 'Invalid adoption status.'
+            });
+        }
+
+        // Validate breed based on selected species
+        if (!breedsBySpecies[species].includes(breed)) {
+            return res.status(400).json({
+                message: 'Invalid breed for the selected species.'
             });
         }
 

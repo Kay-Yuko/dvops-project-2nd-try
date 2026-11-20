@@ -1,68 +1,101 @@
 [
   {
-    "name": "john",
-    "age": "teen",
-    "description": "Long description",
-    "image": "images/dummy.jpg",
-    "gender": "male",
-    "status": "available",
-    "species": "dog",
-    "breed": "Poodle",
-    "id": "1"
-  },
-  {
-    "name": "khaden",
-    "age": "teen",
-    "description": "long description",
-    "image": "images/dummy.jpg",
-    "gender": "male",
-    "status": "available",
-    "species": "cat",
-    "breed": "Siamese",
-    "id": "2"
-  },
-  {
-    "name": "john",
-    "age": "teen",
-    "description": "long description",
-    "image": "images/dummy.jpg",
-    "gender": "male",
-    "status": "available",
-    "species": "rabbit",
-    "breed": "Polish",
-    "id": "3"
-  },
-  {
-    "name": "khaden",
-    "age": "teen",
-    "description": "long description",
-    "image": "images/dummy.jpg",
-    "gender": "male",
-    "status": "available",
-    "species": "rabbit",
-    "breed": "Polish",
-    "id": "4"
-  },
-  {
-    "name": "john",
-    "age": "teen",
-    "description": "long description",
-    "image": "images/dummy.jpg",
+    "name": "Cliff",
+    "age": "child",
+    "description": "Cliff is an affectionate, curious senior boy who enjoys taking his time to investigate the world around him.\n\nHaving spent much of his earlier life in a shelter environment, some everyday experiences have taken time for Cliff to become familiar with. His foster experience has given us valuable insight into how he manages life in a home and has shown that he can settle into many of the routines that come with living alongside a family.",
+    "image": "images/gold.png",
     "gender": "male",
     "status": "available",
     "species": "dog",
     "breed": "Golden retriever",
-    "id": "5"
+    "id": "ef4bd853-9876-4ba7-986d-b5ef31a5e99e"
   },
   {
-    "name": "Bob",
-    "age": "adult",
-    "description": "A friendly dog.",
-    "image": "images/dummy.jpg",
+    "name": "Keiji",
+    "age": "teen",
+    "description": "Keiji is a bright, active boy who has built an impressive set of skills through positive-reinforcement training.\n\nHe is an exceptionally quick learner, loves working with his handlers and has even learned to voluntarily participate in several aspects of his own care. Once you've earned his trust, there's also a wonderfully affectionate and goofy side waiting underneath all those brains.",
+    "image": "images/corgi.png",
     "gender": "male",
-    "status": "available",
+    "status": "adopted",
+    "species": "dog",
+    "breed": "Corgi",
+    "id": "ec22fee4-8005-4f2e-a89f-0827afd24729"
+  },
+  {
+    "name": "Hazel",
+    "age": "adult",
+    "description": "Hazel was originally adopted from SPCA as a puppy and spent many years living in a home before returning to our care after her owner passed away.\n\nHaving known home life for most of her years, Hazel is now looking for another family to share her familiar routines with.",
+    "image": "images/poodle.png",
+    "gender": "female",
+    "status": "reserved",
     "species": "dog",
     "breed": "Poodle",
-    "id": "1296a706-fc18-40dd-95fe-7cc6c0319364"
+    "id": "69d9a88d-3af3-46d0-90e5-a5691b49e1f0"
+  },
+  {
+    "name": "Churro",
+    "age": "teen",
+    "description": "Churro is a sweet and affectionate girl who has shown incredible resilience. She is very comfortable with human touch and loves being around people. Despite the medical challenges she has faced, she remains a loving companion who simply needs a family willing to provide a little extra care and attention.\n\nDaily Life: Churro is looking for a forever home where she can lead a happy and comfortable life. Adopters should be prepared for a companion who is sweet and loving but requires a consistent medical routine. Because she has been inconsistent with her litter box usage, her new family should be prepared for some occasional mess while she settles into her stable routine.",
+    "image": "images/siamese.png",
+    "gender": "female",
+    "status": "adopted",
+    "species": "cat",
+    "breed": "Siamese",
+    "id": "f6b8713d-3bdf-4b0b-bc44-241afb1ddcd5"
+  },
+  {
+    "name": "Pixie",
+    "age": "adult",
+    "description": "Pixie is a spirited little girl with a huge personality. Affectionately described as a \"mini-tornado\", she is curious, energetic, and always ready for her next adventure. She loves spending time with people and has an adorable habit of reaching out with her paw to tap her favourite humans when she wants attention.\n\nHer medical condition has never dampened her cheerful spirit. Pixie approaches each day with enthusiasm and is looking for a family who will love her for the playful, affectionate cat she is.",
+    "image": "images/coon.png",
+    "gender": "female",
+    "status": "adopted",
+    "species": "cat",
+    "breed": "Maine coon",
+    "id": "5048c949-76d3-4175-be67-802b6f194a47"
+  },
+  {
+    "name": "Lantern",
+    "age": "teen",
+    "description": "Personality: Lantern is a bouncy, bright, and full of life girl—a true testament to her resilience. Described as sweet and courageous with a heart of gold, she has shown incredible strength every step of her recovery.\n\nDaily Life: Lantern is looking for a home where she can enjoy a happy, healthy future. Adopters should provide a safe indoor environment and be prepared to offer lots of affection and gentle care as she continues to settle into her new life.",
+    "image": "images/doll.png",
+    "gender": "female",
+    "status": "adopted",
+    "species": "cat",
+    "breed": "Ragdoll",
+    "id": "fee182f6-317f-4076-be1e-bb0ff270aa8d"
+  },
+  {
+    "name": "Chumbles",
+    "age": "adult",
+    "description": "Chumbles is a curious, active boy who enjoys exploring his surroundings and going on little foraging adventures. He also has a healthy appetite and is always happy when there is something tasty to discover!\n\nWhile he can be a little cautious at first, Chumbles becomes more comfortable when given time to get to know his humans. He does best with a gentle and patient approach, without sudden movements or attempts to rush interactions.",
+    "image": "images/lop.png",
+    "gender": "male",
+    "status": "available",
+    "species": "rabbit",
+    "breed": "Holland lop",
+    "id": "657d0000-b0dd-44c3-9f49-937633832518"
+  },
+  {
+    "name": "Squeaks",
+    "age": "child",
+    "description": "Squeaks is an energetic and inquisitive hamster who loves exploring his surroundings. He especially enjoys burrowing, so he will need plenty of suitable bedding to dig, tunnel, and create his own cosy underground kingdom.\n\nHe is also very food motivated and enjoys opportunities to forage and search for his favourite treats.",
+    "image": "images/dwarf.png",
+    "gender": "male",
+    "status": "reserved",
+    "species": "rabbit",
+    "breed": "Netherland dwarf",
+    "id": "85431081-31d2-4c0b-a7ae-a0c7fcab22ce"
+  },
+  {
+    "name": "Tita",
+    "age": "teen",
+    "description": "Tita has a lovely mix of affectionate and adventurous.\n\nAt home, she loves cuddles and affection but is equally happy settling nearby and quietly keeping her person company while they work.\n\nOutside, she's ready for an adventure. Tita has explored places including the Botanic Gardens, Marina Bay Sands, East Coast Park and Jurong Lake Gardens with her familiar people.\n\nShe's also a clever girl who already knows cues including sit, stay and paw.",
+    "image": "images/polish.png",
+    "gender": "female",
+    "status": "reserved",
+    "species": "rabbit",
+    "breed": "Polish",
+    "id": "0f56f26d-a463-433a-b4ba-96496eef3b16"
   }
 ]

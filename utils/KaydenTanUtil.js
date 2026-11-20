@@ -1,7 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
 const RESOURCES_FILE = path.join(__dirname, 'students.json');
-const { id } = req.params;
 
 async function editResource(req, res) {
     try {

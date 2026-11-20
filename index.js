@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require("body-parser");
+const { verifyAdmin } = require('./utils/StudentsAuth');
 var app = express();
 const PORT = process.env.PORT || 5050
 var startPage = "index.html";
@@ -15,13 +16,13 @@ app.get('/filter-resources', filterResources);
 
 
 const {addResource} = require('./utils/JoenChowUtil');
-app.post('/add-resource', addResource);
+app.post('/add-resource', verifyAdmin, addResource);
 
 const {editResource} = require('./utils/KaydenTanUtil');
-app.put('/edit-resource/:id', editResource);
+app.put('/edit-resource/:id', verifyAdmin, editResource);
 
 const {deleteResource} = require('./utils/SamuelYeoUtil');
-app.delete('/delete-resource/:id', deleteResource);
+app.delete('/delete-resource/:id', verifyAdmin, deleteResource);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);

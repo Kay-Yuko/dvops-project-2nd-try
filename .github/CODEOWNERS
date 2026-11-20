@@ -1,39 +1,53 @@
-# Default ownership
+
+# Default ownership for all repository files
 * @Kay-Yuko @JoenChow07 @Samuelykw
+
 
 # Shared frontend files
 /public/index.html @Kay-Yuko @JoenChow07 @Samuelykw
 /public/details.html @Kay-Yuko @JoenChow07 @Samuelykw
 /public/css/styles.css @Kay-Yuko @JoenChow07 @Samuelykw
+/public/js/students.js @Kay-Yuko @JoenChow07 @Samuelykw
 
-# Shared backend and database
+
+# Shared backend and JSON storage
 /index.js @Kay-Yuko @JoenChow07 @Samuelykw
-/utils/resources.json @Kay-Yuko @JoenChow07 @Samuelykw
-/utils/resources.template.json @Kay-Yuko @JoenChow07 @Samuelykw
-/public/js/update-animal-breed @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/StudentsUtil.js @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/students.json @Kay-Yuko @JoenChow07 @Samuelykw
+/utils/students.template.json @Kay-Yuko @JoenChow07 @Samuelykw
 
-# SCM documentation
+
+# Kayden - Animal editing
+/public/js/kayden-tan.js @Kay-Yuko
+/utils/KaydenTanUtil.js @Kay-Yuko
+
+
+# Joen - Animal creation
+/public/js/joen-chow.js @JoenChow07
+/utils/JoenChowUtil.js @JoenChow07
+
+
+# Samuel - Animal filtering and deletion
+/public/js/samuel-yeo.js @Samuelykw
+/utils/SamuelYeoUtil.js @Samuelykw
+
+
+# Documentation
 /docs/ @Samuelykw
+/CHANGELOG.md @Samuelykw
+/README.md @Kay-Yuko @JoenChow07 @Samuelykw
 
-# CODEOWNERS maintenance
+
+# Repository configuration
 /.github/CODEOWNERS @Samuelykw @Kay-Yuko
-
-# Samuel's pet filtering feature
-/public/js/filter-animal.js @Samuelykw
-/utils/filterUtil.js @Samuelykw
-
-# Kayden's edit animal feature
-/public/js/edit-resource.js @Kay-Yuko
-/public/utils/editResourceUtil.js @Kay-Yuko
-
-# Kayden's PULL_REQUEST_TEMPLATE
 /.github/PULL_REQUEST_TEMPLATE.md @Kay-Yuko
+/.github/workflows/ @Kay-Yuko @JoenChow07 @Samuelykw
 
-# joens's pet add feature
-/public/js/add-resource.js @JoenChow07
-/utils/addResourceUtil.js @JoenChow07
+/.gitignore @Kay-Yuko @JoenChow07 @Samuelykw
+/package.json @Kay-Yuko @JoenChow07 @Samuelykw
+/package-lock.json @Kay-Yuko @JoenChow07 @Samuelykw
 
-# githooks maintenance
-/.githooks/commit-msg @JoenChow07
-/.githooks/pre-commit @JoenChow07
+
+# Git hooks and attributes - Joen
+/.githooks/ @JoenChow07
 /.gitattributes @JoenChow07

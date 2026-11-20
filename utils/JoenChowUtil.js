@@ -6,6 +6,29 @@ const { Resource } = require('./StudentsUtil');
 const RESOURCES_FILE = path.join(__dirname, 'students.json');
 const TEMPLATE_FILE = path.join('utils', 'students.template.json')
 
+const allowedGenders = ['male', 'female'];
+const allowedAges = ['adult', 'teen', 'child'];
+const allowedSpecies = ['dog', 'cat', 'rabbit'];
+const allowedStatuses = ['available', 'adopted', 'reserved'];
+
+const breedsBySpecies = {
+    dog: [
+        'Golden retriever',
+        'Corgi',
+        'Poodle'
+    ],
+    cat: [
+        'Siamese',
+        'Maine coon',
+        'Ragdoll'
+    ],
+    rabbit: [
+        'Holland lop',
+        'Netherland dwarf',
+        'Polish'
+    ]
+};
+
 async function addResource(req, res) {
     try {
 
@@ -22,6 +45,38 @@ async function addResource(req, res) {
         ) {
             return res.status(400).json({
                 message: 'All fields are required and must be valid.'
+            });
+        }
+
+        // Validate dropdown values
+        if (!allowedGenders.includes(req.body.gender)) {
+            return res.status(400).json({
+                message: 'Invalid gender.'
+            });
+        }
+
+        if (!allowedAges.includes(req.body.age)) {
+            return res.status(400).json({
+                message: 'Invalid age category.'
+            });
+        }
+
+        if (!allowedSpecies.includes(req.body.species)) {
+            return res.status(400).json({
+                message: 'Invalid species.'
+            });
+        }
+
+        if (!allowedStatuses.includes(req.body.status)) {
+            return res.status(400).json({
+                message: 'Invalid adoption status.'
+            });
+        }
+
+        // Validate breed based on selected species
+        if (!breedsBySpecies[req.body.species].includes(req.body.breed)) {
+            return res.status(400).json({
+                message: 'Invalid breed for the selected species.'
             });
         }
 

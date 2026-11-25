@@ -85,7 +85,7 @@ function updateResource(id) {
         response = JSON.parse(request.responseText);
 
         // If the backend confirms success
-        if (response.message == "Animal updated successfully!") {
+        if (response.message == "Animal updated successfully") {
             alert('Edited Animal: ' + jsonData.name + '!');
 
             // Close popup

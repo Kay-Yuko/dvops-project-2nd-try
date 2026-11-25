@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!checkAdminRole()) {
             return;
-        }
+        }//comment this for backend to work
 
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');

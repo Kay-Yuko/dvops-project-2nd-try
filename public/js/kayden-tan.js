@@ -2,7 +2,7 @@ function checkAdminRole() {
     var role = JSON.parse(sessionStorage.getItem("role"));
 
     if (!role || role.id !== 2) {
-        alert("Access denied. Admin only.");
+        alert("Access denied! Admin only.");
         return false;
     }
 

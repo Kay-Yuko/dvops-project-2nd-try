@@ -12,9 +12,9 @@ function checkAdminRole() {
 // Function to open the edit popup and pre-fill it with the selected animal's data
 function editResource() {
 
-    if (!checkAdminRole()) {
-        return;
-    }
+    // if (!checkAdminRole()) {
+    //     return;
+    // }
 
     var selectedResource = window.currentAnimal;
 

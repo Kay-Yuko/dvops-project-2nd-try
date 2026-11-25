@@ -42,9 +42,9 @@ function editResource() {
 // Function to send updated animal data to the backend API
 function updateResource(id) {
 
-    if (!checkAdminRole()) {
-        return;
-    }
+    // if (!checkAdminRole()) {
+    //     return;
+    // }
 
     var response = "";
 

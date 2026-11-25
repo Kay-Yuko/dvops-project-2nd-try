@@ -11,9 +11,9 @@ function checkAdminRole() {
 
 function addResource() {
 
-    if (!checkAdminRole()) {
-        return;
-    }
+    // if (!checkAdminRole()) {
+    //     return;
+    // }
 
     var response = "";
 

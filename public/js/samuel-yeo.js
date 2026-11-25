@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
 
-        if (!checkAdminRole()) {
-            return;
-        }
+        // if (!checkAdminRole()) {
+        //     return;
+        // }
 
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');

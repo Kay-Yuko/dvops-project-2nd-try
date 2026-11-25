@@ -94,7 +94,7 @@ function updateResource(id) {
             // Refresh animal details
             viewAnimalDetails();
         } else {
-            alert('Unable to edit animal!');
+            alert('Unable to edit animal');
         }
     };
 
